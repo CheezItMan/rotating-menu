@@ -14,19 +14,15 @@ body {
 
 .container {
   background-color: #fafafa;
-  width: 100vw;
-  transition: transform 0.5s linear;
   transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
   min-height: 100vh;
   padding: 50px;
 }
 
 .container.show-nav {
   transform: rotate(-20deg);
-}
-
-.container.show-nav circle {
-  transform: rotate(70deg);
 }
 
 .circle-container {
@@ -44,6 +40,10 @@ body {
   transition: transform 0.5s linear;
 }
 
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
 .circle button {
   cursor: pointer;
   position: absolute;
@@ -53,7 +53,7 @@ body {
   background: transparent;
   border: 0;
   font-size: 26px;
-  color: #ffff;
+  color: #fff;
 }
 
 .circle button:focus {
@@ -68,29 +68,6 @@ body {
   top: 60%;
   transform: rotate(90deg);
   transform-origin: top left;
-}
-
-.content img {
-  max-width: 100%;
-}
-
-.content {
-  max-width: 1000px;
-  margin: 50px auto;
-}
-
-.content h1 {
-  margin: 0;
-}
-
-.content small {
-  color: #555;
-  font-style: italic;
-}
-
-.content p {
-  color: #333;
-  line-height: 1.5;
 }
 
 .container.show-nav + nav li {
@@ -131,4 +108,38 @@ nav ul li + li {
 nav ul li + li + li {
   margin-left: 30px;
   transform: translateX(-200%);
+}
+
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #ff7979;
+  font-weight: bold;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
 }
